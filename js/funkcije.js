@@ -7,26 +7,34 @@ if(localStorage.getItem('restorani') === null){
 						new Array(	
 						{
 						"ime":"Orašac",
+						"imeEng":"Orašac",
 						"tipHrane":"Domaća",
+						"tipHraneEng":"Traditional",
 						"lokacija":"Bulevar kralja Aleksandra 122",
+						"lokacijaEng":"King Aleksandar Boulevard 122",
 						"ocena":5.00,
 						"brojGlasova":1,
 						"stranica":"orasac.html",
+						"stranicaEng":"orasacEng.html",
 						"stranicaDostava":"hranaOrasac.html",
+						"stranicaDostavaEng":"hranaOrasacEng.html",
 						"hrana" : 
 							new Array( 
 							{
 								"naziv" : "Karađorđeva šnicla",
+								"nazivEng" : "Karadjordje's Steak",
 								"cena" : 770,
 								"slika" : "karadjordjeva_snicla.jpg"	
 							},
 							{
 								"naziv" : "Dimljena vešalica",
+								"nazivEng" : "Smoked Pork",
 								"cena" : 890,
 								"slika" : "dimljena_vesalica.jpg"	
 							},
 							{
 								"naziv" : "Leskovački uštipci",
+								"nazivEng" : "Ushtipci from Leskovac",
 								"cena" : 690,
 								"slika" : "leskovacki_ustipci.jpg"	
 							}							
@@ -34,26 +42,34 @@ if(localStorage.getItem('restorani') === null){
 						},
 						{
 						"ime":"Zlatni opanak",
+						"imeEng":"Golden opanak",
 						"tipHrane":"Domaća",
+						"tipHraneEng":"Traditional",
 						"lokacija":"Bulevar kralja Aleksandra 119",
+						"lokacijaEng":"King Aleksandar Boulevard 119",
 						"ocena":4.60,
 						"brojGlasova":1,
 						"stranica":"opanak.html",
+						"stranicaEng":"opanakEng.html",
 						"stranicaDostava":"hranaOpanak.html",
+						"stranicaDostavaEng":"hranaOpanakEng.html",
 						"hrana" : 
 							new Array( 
 							{
 								"naziv" : "Karađorđeva šnicla",
+								"nazivEng" : "Karadjordje's Steak",
 								"cena" : 680,
 								"slika" : "karadjordjeva_snicla.jpg"	
 							},
 							{
 								"naziv" : "Ćevapi",
+								"nazivEng" : "Chevaps",
 								"cena" : 550,
 								"slika" : "cevapi.jpg"	
 							},
 							{
 								"naziv" : "Pljeskavica",
+								"nazivEng" : "Beefburger",
 								"cena" : 600,
 								"slika" : "pljeskavica.jpg"	
 							}							
@@ -66,26 +82,34 @@ if(localStorage.getItem('restorani') === null){
 						new Array(
 						{
 						"ime" : "So i Biber",
+						"imeEng" : "Salt and Pepper",
 						"tipHrane" : "Domaća",
+						"tipHraneEng" : "Traditional",
 						"lokacija" : "Staro sajmište 19",
+						"lokacijaEng" : "Old Fairground 19",
 						"ocena" : 4.50,
 						"brojGlasova": 1,
 						"stranica" : "soibiber.html",
+						"stranicaEng" : "soibiberEng.html",
 						"stranicaDostava":"hranaSoIBiber.html",
+						"stranicaDostavaEng":"hranaSoIBiberEng.html",
 						"hrana" : 
 							new Array(
 							{
 								"naziv" : "Omlet sa šunkom",
+								"nazivEng" : "Omelette with Ham",
 								"cena"  : 210,
 								"slika" : "omletsasunkom.jpg"			
 							},
 							{
-								"naziv" : "Teleća Čorba",
+								"naziv" : "Teleća čorba",
+								"nazivEng":"Veal Soup",
 								"cena"  : 170,
 								"slika" : "telecacorba.jpg"			
 							},
 							{
 								"naziv" : "Jagnjeća Kapama",
+								"nazivEng":"Lamb Caps",
 								"cena"  : 380,
 								"slika" : "jagnjecakapama.jpg"			
 							}
@@ -94,27 +118,34 @@ if(localStorage.getItem('restorani') === null){
 						},
 						{
 						"ime" : "Durmitor",
+						"imeEng" : "Durmitor",
 						"tipHrane" : "Domaća",
+						"tipHraneEng" : "Traditional",
 						"lokacija" : "Omladinskih brigada 16",
+						"lokacijaEng":"Youth Brigades 16",
 						"ocena" : 4.80,
 						"brojGlasova": 1,
 						"stranicaDostava":"hranaDurmitor.html",
+						"stranicaDostavaEng":"hranaDurmitorEng.html",
 						"stranica" : "durmitor.html",
-						
+						"stranicaEng" : "durmitorEng.html",
 						"hrana" : 
 							new Array(
 							{
 								"naziv" : "Ljuta Kobasica",
+								"nazivEng":"Hot Sausage",
 								"cena"  : 240,
 								"slika" : "ljutakobasica.jpg"			
 							},
 							{
 								"naziv" : "Dimljena vešalica",
+								"nazivEng":"Smoked Pork",
 								"cena"  : 320,
 								"slika" : "dimljenavesalica.jpg"			
 							},
 							{
 								"naziv" : "Gurmanska Pljeskavica",
+								"nazivEng":"Gourmand's Hamburger",
 								"cena"  : 280,
 								"slika" : "Pljeskavica.jpg"			
 							}
@@ -123,26 +154,34 @@ if(localStorage.getItem('restorani') === null){
 						},
 						{
 						"ime" : "Novak",
+						"imeEng":"Novak",
 						"tipHrane" : "Internacionalna",
+						"tipHraneEng" : "International",
 						"lokacija" : "Bulevar Arsenija Čarnojevića 54A",
+						"lokacijaEng" : "Arsenije Čarnojević Boulevard 54A",
 						"ocena" : 5.00,
 						"brojGlasova": 1,
 						"stranica" : "novak.html",
+						"stranicaEng" : "novakEng.html",
 						"stranicaDostava":"hranaNovak.html",
+						"stranicaDostavaEng":"hranaNovakEng.html",
 						"hrana" : 
 							new Array(
 							{
-								"naziv" : "Teleća Čorba",
+								"naziv" : "Teleća čorba",
+								"nazivEng" : "Veal Soup",
 								"cena"  : 280,
 								"slika" : "telecacorbica.jpg"			
 							},
 							{
 								"naziv" : "Bela Vešalica",
+								"nazivEng" : "White Pork",
 								"cena"  : 680,
 								"slika" : "belavesalica.jpg"			
 							},
 							{
 								"naziv" : "Ćevapi",
+								"nazivEng" : "Chevaps",
 								"cena"  : 780,
 								"slika" : "cevapi.jpg"			
 							}
@@ -214,7 +253,7 @@ restorani[opstina].sort(function(a,b){
 });
 for (var i = 0; i < restorani[opstina].length;i++){
 	
-	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href='index.html'\"><div class=\"card-body\">";
+	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href=\'"+restorani[opstina][i]["stranicaEng"]+"\'\"><div class=\"card-body\">";
 	str+="<div class=\"card-text\"><b>Naziv restorana: </b>" + restorani[opstina][i].ime +"</div>";
 	str+="<div class=\"card-text\"><b>Tip hrane: </b>" + restorani[opstina][i].tipHrane +"</div>"; 
 	str+="<div class=\"card-text\"><b>Lokacija: </b>" + restorani[opstina][i].lokacija +"</div>"; 
@@ -276,6 +315,7 @@ function naruciHranu(opstina,restoran){
 	var restorani = JSON.parse(localStorage.getItem('restorani'));
 	var hrana = restorani[opstina][restoran]["hrana"];
 	var nazivRestorana = restorani[opstina][restoran].ime;
+	var nazivRestoranaEng = restorani[opstina][restoran].imeEng;
 	var cena = 0;
 	for(var i = 0; i<hrana.length;i++){
 		cena+=hrana[i].cena*document.getElementById(hrana[i].naziv).value;
@@ -288,7 +328,7 @@ function naruciHranu(opstina,restoran){
 		narudzbine = new Array();
 	}
 	
-		narudzbine.push({"naziv":nazivRestorana,"cena":cena,"datum":datum});
+		narudzbine.push({"naziv":nazivRestorana,"nazivEng":nazivRestoranaEng,"cena":cena,"datum":datum});
 	
 	var narudzbineJSON = JSON.stringify(narudzbine);
 	sessionStorage.setItem('narudzbine',narudzbineJSON);
@@ -360,4 +400,208 @@ function savePDF(naziv,cena,datum){
 	var doc = new jsPDF();
 	doc.text(20,20,"Naziv: "+naziv+"\nCena: "+cena+"\nDatum: "+datum);
 	doc.save('naruzdbina.pdf')
+}
+
+//--------------ENG VERZIJE--------
+function loadBestEng(){
+	var restorani = JSON.parse(localStorage.getItem('restorani'));
+	var restoraniBest = new Array();
+	restoraniBest = restoraniBest.concat(restorani.Zvezdara);
+	restoraniBest = restoraniBest.concat(restorani.Vračar);
+	restoraniBest = restoraniBest.concat(restorani['Novi Beograd']);
+	restoraniBest.sort(function f(a,b){if(a["ocena"]<b["ocena"]) return 1; else if (a["ocena"]>b["ocena"]) return -1; else return 0;})
+	var str="";
+	for(var i = 0;i<3;i++){
+	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href=\'"+restoraniBest[i]["stranicaEng"]+"\'\"><div class=\"card-body\">";
+	str+="<div class=\"card-text\"><b>Name of Restaurant: </b>" + restoraniBest[i].imeEng +"</div>";
+	str+="<div class=\"card-text\"><b>Type of Food: </b>" + restoraniBest[i].tipHraneEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Location: </b>" + restoraniBest[i].lokacijaEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Rating: </b>" + restoraniBest[i].ocena.toFixed(2) +"</div></div></div>";
+	}
+	document.getElementById("best").innerHTML = str;
+}
+function restoraniOpstinaEng(opstina) {
+var restorani = JSON.parse(localStorage.getItem('restorani'));
+var str="";
+for (var i = 0; i < restorani[opstina].length;i++){
+	
+	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href=\'"+restorani[opstina][i]["stranicaEng"]+"\'\"><div class=\"card-body\">";
+	str+="<div class=\"card-text\"><b>Name of Restaurant: </b>" + restorani[opstina][i].imeEng +"</div>";
+	str+="<div class=\"card-text\"><b>Type of Food: </b>" + restorani[opstina][i].tipHraneEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Location: </b>" + restorani[opstina][i].lokacijaEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Rating: </b>" + restorani[opstina][i].ocena.toFixed(2) +"</div></div></div>";
+}
+document.getElementById("restorani").innerHTML = str;
+}
+
+function sortirajRestoraneEng(opstina){
+	let sortBy=[];
+if(document.getElementById('ime').checked){
+	sortBy.push({prop:"imeEng",direction:-1});
+}
+if(document.getElementById('lokacija').checked){
+	sortBy.push({prop:"lokacijaEng",direction:-1});
+}
+if(document.getElementById('ocena').checked){
+	sortBy.push({prop:"ocena",direction:-1});
+}
+var restorani = JSON.parse(localStorage.getItem('restorani'));
+var str="";
+restorani[opstina].sort(function(a,b){
+  let i = 0, result = 0;
+  while(i < sortBy.length && result === 0) {
+    result = sortBy[i].direction*(a[ sortBy[i].prop ].toString() < b[ sortBy[i].prop ].toString() ? -1 : (a[ sortBy[i].prop ].toString() > b[ sortBy[i].prop ].toString() ? 1 : 0));
+    i++;
+  }
+  return result;
+});
+for (var i = 0; i < restorani[opstina].length;i++){
+	
+	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href='"+restorani[opstina][i].stranicaEng+"'\"><div class=\"card-body\">";
+	str+="<div class=\"card-text\"><b>Name of Restaurant: </b>" + restorani[opstina][i].imeEng +"</div>";
+	str+="<div class=\"card-text\"><b>Type of Food: </b>" + restorani[opstina][i].tipHraneEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Location: </b>" + restorani[opstina][i].lokacijaEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Rating: </b>" + restorani[opstina][i].ocena.toFixed(2) +"</div></div></div>";
+}
+document.getElementById("restorani").innerHTML = str;
+}
+
+function ucitajDostavaEng(){
+	var restorani = JSON.parse(localStorage.getItem('restorani'));
+	var restoraniBest = new Array();
+	restoraniBest = restoraniBest.concat(restorani.Zvezdara);
+	//restoraniBest = restoraniBest.concat(restorani.Vračar);
+	restoraniBest = restoraniBest.concat(restorani['Novi Beograd']);
+	var str="";
+	for(var i = 0;i<restoraniBest.length;i++){
+	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href=\'"+restoraniBest[i]["stranicaDostavaEng"]+"\'\"><div class=\"card-body\">";
+	str+="<div class=\"card-text\"><b>Name of Restaurant: </b>" + restoraniBest[i].imeEng +"</div>";
+	str+="<div class=\"card-text\"><b>Type of Food: </b>" + restoraniBest[i].tipHraneEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Location: </b>" + restoraniBest[i].lokacijaEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Rating: </b>" + restoraniBest[i].ocena.toFixed(2) +"</div></div></div>";
+	}
+	document.getElementById("dostava").innerHTML = str;	
+}
+function filtrirajPoTipuHraneEng(){
+	var restorani = JSON.parse(localStorage.getItem('restorani'));
+	var restoraniBest = new Array();
+	restoraniBest = restoraniBest.concat(restorani.Zvezdara);
+	//restoraniBest = restoraniBest.concat(restorani.Vračar);
+	restoraniBest = restoraniBest.concat(restorani['Novi Beograd']);
+	var str="";
+	for(var i = 0;i<restoraniBest.length;i++){
+	if(!document.getElementById(restoraniBest[i]["tipHrane"]).checked) continue;	
+	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href=\'"+restoraniBest[i]["stranicaDostavaEng"]+"\'\"><div class=\"card-body\">";
+	str+="<div class=\"card-text\"><b>Name of Restaurant: </b>" + restoraniBest[i].imeEng +"</div>";
+	str+="<div class=\"card-text\"><b>Type of Food: </b>" + restoraniBest[i].tipHraneEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Location: </b>" + restoraniBest[i].lokacijaEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Rating: </b>" + restoraniBest[i].ocena.toFixed(2) +"</div></div></div>";
+	}	
+	document.getElementById("dostava").innerHTML = str;	
+}
+
+function ucitajHranuEng(opstina,restoran){
+	var restorani = JSON.parse(localStorage.getItem('restorani'));
+	var hrana = restorani[opstina][restoran]["hrana"];
+	var str="";
+	for(var i = 0;i<hrana.length;i++){
+	str+="<div class=\"card mt-3\"><div class=\"row no-gutters\"><div class=\"col-auto\"> <img src=\"images/"+hrana[i].slika + "\"  width=200 height=200></div>";
+	str+="<div class=\"col\"><div class=\"card-block px-2\"><p class=\"card-text\"><b>Name of Food: </b>" +hrana[i].nazivEng +"</p>";
+	str+="<p class=\"card-text\"><b>Price: </b>" +hrana[i].cena +" dinars</p>";
+	str+="<select class='form-control' id='"+hrana[i].naziv+"'><option value='0'>Choose the ammount of food...</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option></select>"
+	str+="</div></div></div></div>"
+	}
+	str+="<div class='row mt-2'><div class='col text-center'><button type='button' onclick=\"naruciHranuEng('"+opstina+"','"+restoran+"')\" class='btn btn-outline-primary'>Order</button></div></div>"
+	document.getElementById("hranaRes").innerHTML = str;	 
+}
+
+function naruciHranuEng(opstina,restoran){
+	var restorani = JSON.parse(localStorage.getItem('restorani'));
+	var hrana = restorani[opstina][restoran]["hrana"];
+	var nazivRestorana = restorani[opstina][restoran].ime;
+	var nazivRestoranaEng = restorani[opstina][restoran].imeEng;
+	var cena = 0;
+	for(var i = 0; i<hrana.length;i++){
+		cena+=hrana[i].cena*document.getElementById(hrana[i].naziv).value;
+	}
+	
+	var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
+	var d = new Date();
+	var datum = d.getDate()+"-"+(d.getMonth() + 1)+"-"+d.getFullYear();
+	if(narudzbine ===null){
+		narudzbine = new Array();
+	}
+	
+		narudzbine.push({"naziv":nazivRestorana,"nazivEng":nazivRestoranaEng,"cena":cena,"datum":datum});
+	
+	var narudzbineJSON = JSON.stringify(narudzbine);
+	sessionStorage.setItem('narudzbine',narudzbineJSON);
+	window.location.href="podaciEng.html";
+}
+
+function proveraPodatakaEng(){
+	if(document.formaUnos.ime.value!=""){
+					if(document.formaUnos.prezime.value!=""){
+						if(document.formaUnos.email.value!=""){
+							var regex = /^\w+([\.-]\w+)?@\w+(\.\w{2,3})$/;
+							if(regex.test(document.formaUnos.email.value)){
+								if(document.formaUnos.telefon.value!=""){
+									var regex = /^\d{3}\/\d{3}-\d{2}-\d{2}$/;
+									if(regex.test(document.formaUnos.telefon.value)){
+										if(document.formaUnos.adresa.value!=""){
+											
+											
+											var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
+											alert("The price of your order is: "+narudzbine[narudzbine.length-1].cena+" dinars.");
+											window.location.href="indexEng.html";
+										}
+										else{
+											alert("You have to enter your adress.");
+										}
+									}
+									else{
+										alert("The phone number is not in the right format.");
+									}
+								}
+								else{
+									alert("You have to enter your phone number.");
+								}
+							}
+							else{
+								alert("The e-mail is not in the right format.");
+							}
+						}
+						else{
+							alert("You have to enter your e-mail.");
+						}
+					}
+					else{
+						alert("You have to enter your surname.");
+					}
+				}
+				else{
+					alert("You have to enter your name.");
+				}
+}
+
+function loadNarudzbineEng(){
+	var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
+	var str="";
+	if(sessionStorage.getItem('narudzbine')!==null){
+	for(var i = 0;i<narudzbine.length;i++){
+	str+="<div class=\"card mt-3 mb-3\" \"><div class=\"card-body\">";
+	str+="<div class=\"card-text\"><b>Name of Restaurant: </b>" + narudzbine[i].nazivEng +"</div>";
+	str+="<div class=\"card-text\"><b>Price: </b>" + narudzbine[i].cena +" dinara</div>";  
+	str+="<div class=\"card-text\"><b>Date: </b>" + narudzbine[i].datum +"</div>";
+	str+="<div class=\"card-text mt-1\"><button type='button' onclick=\"savePDFEng('"+narudzbine[i].nazivEng+"',"+narudzbine[i].cena+",'"+narudzbine[i].datum+"')\"class='btn btn-primary'>Save as PDF</button></div></div></div>";
+	}
+	}
+	else {str = "<div class=\"mt-3\" style=\"text-align:center;\">Nemate narudžbina za sada!</div>"}
+	document.getElementById("narudzbine").innerHTML = str;
+}
+
+function savePDFEng(naziv,cena,datum){
+	var doc = new jsPDF();
+	doc.text(20,20,"Name: "+naziv+"\nPrice: "+cena+"\nDate: "+datum);
+	doc.save('order.pdf')
 }
