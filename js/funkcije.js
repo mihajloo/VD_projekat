@@ -548,18 +548,13 @@ function naruciHranu(opstina,restoran){
 	for(var i = 0; i<hrana.length;i++){
 		cena+=hrana[i].cena*document.getElementById(hrana[i].naziv).value;
 	}
-	
-	var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
+	if(cena==0) {alert('Niste naručili ništa!');return;}
 	var d = new Date();
 	var datum = d.getDate()+"-"+(d.getMonth() + 1)+"-"+d.getFullYear();
-	if(narudzbine ===null){
-		narudzbine = new Array();
-	}
+	narudzbina={"naziv":nazivRestorana,"nazivEng":nazivRestoranaEng,"cena":cena,"datum":datum};
 	
-		narudzbine.push({"naziv":nazivRestorana,"nazivEng":nazivRestoranaEng,"cena":cena,"datum":datum});
-	
-	var narudzbineJSON = JSON.stringify(narudzbine);
-	sessionStorage.setItem('narudzbine',narudzbineJSON);
+	var narudzbineJSON = JSON.stringify(narudzbina);
+	sessionStorage.setItem('narudzbina',narudzbineJSON);
 	window.location.href="podaci.html";
 }
 
@@ -573,10 +568,20 @@ function proveraPodataka(){
 									var regex = /^\d{3}\/\d{3}-\d{2}-\d{2}$/;
 									if(regex.test(document.formaUnos.telefon.value)){
 										if(document.formaUnos.adresa.value!=""){
-											
-											
-											var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
-											alert("Ukupna cena vaše narudžbine je: "+narudzbine[narudzbine.length-1].cena+" dinara.");
+										var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
+										var narudzbina = JSON.parse(sessionStorage.getItem('narudzbina'));
+
+										if(narudzbine ===null){
+											narudzbine = new Array();
+										}
+										
+											narudzbine.push(narudzbina);
+										
+										var narudzbineJSON = JSON.stringify(narudzbine);
+										sessionStorage.setItem('narudzbine',narudzbineJSON);
+										sessionStorage.removeItem('narudzbina');
+										
+											alert("Ukupna cena vaše narudžbine je: "+narudzbina.cena+" dinara.");
 											window.location.href="index.html";
 										}
 										else{
@@ -799,18 +804,14 @@ function naruciHranuEng(opstina,restoran){
 	for(var i = 0; i<hrana.length;i++){
 		cena+=hrana[i].cena*document.getElementById(hrana[i].naziv).value;
 	}
-	
-	var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
+	if(cena==0) {alert('You haven\'t ordered any food!');return;}
 	var d = new Date();
 	var datum = d.getDate()+"-"+(d.getMonth() + 1)+"-"+d.getFullYear();
-	if(narudzbine ===null){
-		narudzbine = new Array();
-	}
+	narudzbina={"naziv":nazivRestorana,"nazivEng":nazivRestoranaEng,"cena":cena,"datum":datum};
 	
-		narudzbine.push({"naziv":nazivRestorana,"nazivEng":nazivRestoranaEng,"cena":cena,"datum":datum});
-	
-	var narudzbineJSON = JSON.stringify(narudzbine);
-	sessionStorage.setItem('narudzbine',narudzbineJSON);
+	var narudzbineJSON = JSON.stringify(narudzbina);
+	sessionStorage.setItem('narudzbina',narudzbineJSON);
+
 	window.location.href="podaciEng.html";
 }
 
@@ -824,10 +825,19 @@ function proveraPodatakaEng(){
 									var regex = /^\d{3}\/\d{3}-\d{2}-\d{2}$/;
 									if(regex.test(document.formaUnos.telefon.value)){
 										if(document.formaUnos.adresa.value!=""){
-											
-											
-											var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
-											alert("The price of your order is: "+narudzbine[narudzbine.length-1].cena+" dinars.");
+										var narudzbine = JSON.parse(sessionStorage.getItem('narudzbine'));
+										var narudzbina = JSON.parse(sessionStorage.getItem('narudzbina'));
+
+										if(narudzbine ===null){
+											narudzbine = new Array();
+										}
+										
+											narudzbine.push(narudzbina);
+										
+										var narudzbineJSON = JSON.stringify(narudzbine);
+										sessionStorage.setItem('narudzbine',narudzbineJSON);
+										sessionStorage.removeItem('narudzbina');
+											alert("The price of your order is: "+narudzbina.cena+" dinars.");
 											window.location.href="indexEng.html";
 										}
 										else{
