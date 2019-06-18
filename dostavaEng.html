@@ -74,9 +74,9 @@
 <div class="row mt-3">
 <div class="col-3 border border-primary rounded" style="margin-left:15px">
 
-<fieldset class="text-primary" style="text-align:center">
+<fieldset class="text-primary" style="text-align:center;">
 
-  <legend>Filter by: </legend>
+  <legend>Filter by type of food: </legend>
   <div style="text-align:left">
   <div class="form-group">
     <div class="custom-control custom-checkbox">
@@ -97,10 +97,35 @@
     </div>
   </div>
   </div>
+  
+  <legend>Filter by Township: </legend>
+  <div style="text-align:left">
   <div class="form-group">
-  <button type="button" onclick="filtrirajPoTipuHraneEng()" class="btn btn-outline-primary">Filter</button>
-   </div>
- 
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="Zvezdara" checked="">
+      <label class="custom-control-label" for="Zvezdara">Zvezdara</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="Novi Beograd" checked="">
+      <label class="custom-control-label" for="Novi Beograd">New Belgrade</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="Lion" checked="">
+      <label class="custom-control-label" for="Lion">Lion</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="Palilula" checked="">
+      <label class="custom-control-label" for="Palilula">Palilula</label>
+    </div>
+  </div>  
+  </div>
+  
   <legend>Sort by: </legend>
   <div style="text-align:left">
   <div class="form-group">
@@ -123,13 +148,13 @@
   </div>
   </div>
   <div class="form-group">
-  <button type="button" onclick="sortirajRestorane()" class="btn btn-outline-primary">Sort</button>
+  <button type="button" onclick="pretraziEng()" class="btn btn-outline-primary">Search</button>
    </div>
 </fieldset>
 
 </div>
 
-<div class="col-6">
+<div class="col">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="indexEng.html">Home</a></li>
@@ -137,8 +162,9 @@
 	<li class="breadcrumb-item active" aria-current="page">Delivery</li>
   </ol>
 </nav>
-<div id="dostava" style="align:center"></div></div>
+<div id="dostava" align="center"></div></div>
 </div>
+<div class="banner" onclick="window.location.href='https://www.donesi.com'"></div>
 <!-- Footer begin -->
 <div class="row mt-3">
 <div class="col">

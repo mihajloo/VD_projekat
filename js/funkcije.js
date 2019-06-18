@@ -459,10 +459,10 @@ document.getElementById("restorani").innerHTML = str;
 function sortirajRestorane(opstina){
 	let sortBy=[];
 if(document.getElementById('ime').checked){
-	sortBy.push({prop:"ime",direction:-1});
+	sortBy.push({prop:"ime",direction:1});
 }
 if(document.getElementById('lokacija').checked){
-	sortBy.push({prop:"lokacija",direction:-1});
+	sortBy.push({prop:"lokacija",direction:1});
 }
 if(document.getElementById('ocena').checked){
 	sortBy.push({prop:"ocena",direction:-1});
@@ -630,6 +630,50 @@ function savePDF(naziv,cena,datum){
 	doc.save('naruzdbina.pdf')
 }
 
+function pretrazi(){
+	var restorani = JSON.parse(localStorage.getItem('restorani'));
+	let sortBy=[];
+	var restoraniBest=new Array();
+	if(document.getElementById('Zvezdara').checked)
+	restoraniBest = restoraniBest.concat(restorani.Zvezdara);
+	if(document.getElementById('Novi Beograd').checked)
+	restoraniBest = restoraniBest.concat(restorani['Novi Beograd']);
+	if(document.getElementById('Lion').checked)
+	restoraniBest = restoraniBest.concat(restorani.Lion);
+	if(document.getElementById('Palilula').checked)
+	restoraniBest = restoraniBest.concat(restorani.Palilula);	
+if(document.getElementById('ime').checked){
+	sortBy.push({prop:"ime",direction:1});
+}
+if(document.getElementById('lokacija').checked){
+	sortBy.push({prop:"lokacija",direction:1});
+}
+if(document.getElementById('ocena').checked){
+	sortBy.push({prop:"ocena",direction:-1});
+}
+
+var str="";
+
+restoraniBest.sort(function(a,b){
+  let i = 0, result = 0;
+  while(i < sortBy.length && result === 0) {
+    result = sortBy[i].direction*(a[ sortBy[i].prop ].toString() < b[ sortBy[i].prop ].toString() ? -1 : (a[ sortBy[i].prop ].toString() > b[ sortBy[i].prop ].toString() ? 1 : 0));
+    i++;
+  }
+  return result;
+});
+for (var i = 0; i < restoraniBest.length;i++){
+	if(document.getElementById(restoraniBest[i].tipHrane).checked){
+	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href=\'"+restoraniBest[i]["stranica"]+"\'\"><div class=\"card-body\">";
+	str+="<div class=\"card-text\"><b>Naziv restorana: </b>" + restoraniBest[i].ime +"</div>";
+	str+="<div class=\"card-text\"><b>Tip hrane: </b>" + restoraniBest[i].tipHrane +"</div>"; 
+	str+="<div class=\"card-text\"><b>Lokacija: </b>" + restoraniBest[i].lokacija +"</div>"; 
+	str+="<div class=\"card-text\"><b>Ocena: </b>" + restoraniBest[i].ocena.toFixed(2) +"</div></div></div>";
+	}
+}
+document.getElementById("dostava").innerHTML = str;
+}
+
 //--------------ENG VERZIJE--------
 function loadBestEng(){
 	var restorani = JSON.parse(localStorage.getItem('restorani'));
@@ -666,10 +710,10 @@ document.getElementById("restorani").innerHTML = str;
 function sortirajRestoraneEng(opstina){
 	let sortBy=[];
 if(document.getElementById('ime').checked){
-	sortBy.push({prop:"imeEng",direction:-1});
+	sortBy.push({prop:"imeEng",direction:1});
 }
 if(document.getElementById('lokacija').checked){
-	sortBy.push({prop:"lokacijaEng",direction:-1});
+	sortBy.push({prop:"lokacijaEng",direction:1});
 }
 if(document.getElementById('ocena').checked){
 	sortBy.push({prop:"ocena",direction:-1});
@@ -835,4 +879,47 @@ function savePDFEng(naziv,cena,datum){
 	var doc = new jsPDF();
 	doc.text(20,20,"Name: "+naziv+"\nPrice: "+cena+"\nDate: "+datum);
 	doc.save('order.pdf')
+}
+function pretraziEng(){
+	var restorani = JSON.parse(localStorage.getItem('restorani'));
+	let sortBy=[];
+	var restoraniBest=new Array();
+	if(document.getElementById('Zvezdara').checked)
+	restoraniBest = restoraniBest.concat(restorani.Zvezdara);
+	if(document.getElementById('Novi Beograd').checked)
+	restoraniBest = restoraniBest.concat(restorani['Novi Beograd']);
+	if(document.getElementById('Lion').checked)
+	restoraniBest = restoraniBest.concat(restorani.Lion);
+	if(document.getElementById('Palilula').checked)
+	restoraniBest = restoraniBest.concat(restorani.Palilula);	
+if(document.getElementById('ime').checked){
+	sortBy.push({prop:"ime",direction:1});
+}
+if(document.getElementById('lokacija').checked){
+	sortBy.push({prop:"lokacija",direction:1});
+}
+if(document.getElementById('ocena').checked){
+	sortBy.push({prop:"ocena",direction:-1});
+}
+
+var str="";
+
+restoraniBest.sort(function(a,b){
+  let i = 0, result = 0;
+  while(i < sortBy.length && result === 0) {
+    result = sortBy[i].direction*(a[ sortBy[i].prop ].toString() < b[ sortBy[i].prop ].toString() ? -1 : (a[ sortBy[i].prop ].toString() > b[ sortBy[i].prop ].toString() ? 1 : 0));
+    i++;
+  }
+  return result;
+});
+for (var i = 0; i < restoraniBest.length;i++){
+	if(document.getElementById(restoraniBest[i].tipHrane).checked){
+	str+="<div class=\"card mt-3 mb-3\" style=\"width:25rem\" onclick=\"window.location.href=\'"+restoraniBest[i]["stranicaEng"]+"\'\"><div class=\"card-body\">";
+	str+="<div class=\"card-text\"><b>Naziv restorana: </b>" + restoraniBest[i].imeEng +"</div>";
+	str+="<div class=\"card-text\"><b>Tip hrane: </b>" + restoraniBest[i].tipHraneEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Lokacija: </b>" + restoraniBest[i].lokacijaEng +"</div>"; 
+	str+="<div class=\"card-text\"><b>Ocena: </b>" + restoraniBest[i].ocena.toFixed(2) +"</div></div></div>";
+	}
+}
+document.getElementById("dostava").innerHTML = str;
 }

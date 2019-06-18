@@ -72,7 +72,7 @@
 <!-- Navbar end -->
 <!-- Proseravanje opis -->
 <div class="row mt-3">
-<div class="col-3 border border-primary rounded" style="margin-left:15px;height:500px;">
+<div class="col-3 border border-primary rounded" style="margin-left:15px;">
 
 <fieldset class="text-primary" style="text-align:center;">
 
@@ -109,16 +109,23 @@
   <div class="form-group">
     <div class="custom-control custom-checkbox">
       <input type="checkbox" class="custom-control-input" id="Novi Beograd" checked="">
-      <label class="custom-control-label" for="Novi Beograd">Domaća</label>
+      <label class="custom-control-label" for="Novi Beograd">Novi Beograd</label>
     </div>
   </div>
   <div class="form-group">
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="Internacionalna" checked="">
-      <label class="custom-control-label" for="Internacionalna">Internacionalna</label>
+      <input type="checkbox" class="custom-control-input" id="Lion" checked="">
+      <label class="custom-control-label" for="Lion">Lion</label>
     </div>
   </div>
+  <div class="form-group">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="Palilula" checked="">
+      <label class="custom-control-label" for="Palilula">Palilula</label>
+    </div>
+  </div>  
   </div>
+  
   <legend>Sortiraj po: </legend>
   <div style="text-align:left">
   <div class="form-group">
@@ -141,13 +148,13 @@
   </div>
   </div>
   <div class="form-group">
-  <button type="button" onclick="sortirajRestorane()" class="btn btn-outline-primary">Pretraži</button>
+  <button type="button" onclick="pretrazi()" class="btn btn-outline-primary">Pretraži</button>
    </div>
 </fieldset>
 
 </div>
 
-<div class="col-6">
+<div class="col">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="index.html">Početna</a></li>
@@ -155,8 +162,9 @@
 	<li class="breadcrumb-item active" aria-current="page">Dostava</li>
   </ol>
 </nav>
-<div id="dostava" style="align:center"></div></div>
+<div id="dostava" align="center"></div></div>
 </div>
+<div class="banner" onclick="window.location.href='https://www.donesi.com'"></div>
 <!-- Footer begin -->
 <div class="row mt-3">
 <div class="col">
