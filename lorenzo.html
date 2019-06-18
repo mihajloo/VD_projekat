@@ -1,0 +1,211 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles/bootstrapPromene.css">
+
+
+<script src="https://kit.fontawesome.com/d7aace2616.js"></script>
+<script>
+// Initialize and add the map
+function initMap() {
+ 
+  var restoran = {lat: 44.809520, lng: 20.480450};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 16, center: restoran});
+  
+  var marker = new google.maps.Marker({position: restoran, map: map});
+}
+var x=1;
+function changeEnter(star){
+if(x==1){
+for(var i=1;i<=star;i++){
+document.getElementById(i).className = "fas fa-star"; 
+}
+}
+}
+
+function changeLeave(star){
+if(x==1){
+for(var i=1;i<=star;i++){
+document.getElementById(i).className = "far fa-star"; 
+}
+}
+}
+function changeClick(star){
+if(x==1){
+var restorani = JSON.parse(localStorage.getItem('restorani'));
+var orasac = restorani.Palilula[1];
+var brojGlasova = orasac["brojGlasova"];
+var ocena = orasac["ocena"];
+brojGlasova++;
+var novaOcena = (ocena*(brojGlasova-1) + star)/brojGlasova;
+orasac["ocena"] = novaOcena;
+orasac["brojGlasova"] = brojGlasova;
+restorani.Palilula[1] = orasac;
+var restoraniJSON = JSON.stringify(restorani);
+localStorage.setItem("restorani",restoraniJSON); 
+x=2;
+}
+}
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzZkTT6cB6RA2QSB83adAvNtrotWV__jY&callback=initMap"></script>
+<script src="js/funkcije.js"></script>
+
+<style>
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 50%;  /* The width is the width of the web page */
+		margin-left:auto;
+		margin-right:auto;
+       } 
+  
+</style>
+</head>
+<body>
+<div class="container">
+<!-- Header begin -->
+<div class="row">
+  <div class="col">
+  <header class="page-header">
+
+  </header>
+ </div>
+  <!--<div class="col-8 justify-content-center align-self-center">
+  <h1 class="display-3">FAST DELIVERY!</h1>
+  </div>-->
+
+
+</div>
+<!-- Header end -->
+<!-- Navbar begin -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">FAST DELIVERY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
+      </li>
+   <li class="nav-item dropdown active">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="restorani.html" role="button" aria-haspopup="true" aria-expanded="false">Restorani</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="restoraniZvezdara.html">Zvezdara</a>
+      <a class="dropdown-item" href="restoraniNoviBeograd.html">Novi Beograd</a>
+      <a class="dropdown-item" href="restoraniLion.html">Lion</a>
+      <a class="dropdown-item active" href="restoraniPalilula.html">Palilula</a>
+    </div>
+  </li>
+      <li class="nav-item">
+        <a class="nav-link" href="dostava.html">Dostava</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="mojeNarudzbine.html">Moje narudžbine</a>
+      </li>
+      <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="restorani.html" role="button" aria-haspopup="true" aria-expanded="false">O nama</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="otimu.html">O timu</a>
+      <a class="dropdown-item" href="sponzori.html">Sponzori</a>
+      <a class="dropdown-item" href="nagrade.html">Nagrade</a>
+    </div>
+  </li>
+	<li class="nav-item">
+        <a class="nav-link" href="lorenzo.html"><img src="images/serbiaflag.png" height=30 width=30></a>
+      </li>
+	 <li class="nav-item">
+        <a class="nav-link" href="lorenzoEng.html"><img src="images/ukflag.webp" height=30 width=30></a>
+      </li>  
+    </ul>
+    
+  </div>
+</nav>
+<!-- Navbar end -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Početna</a></li>
+    <li class="breadcrumb-item"><a href="restoraniPalilula.html">Restorani Palilula</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Lorenzo & Kakalamba</li>
+  </ol>
+</nav>
+<div class="row mb-5">
+<div class="col">
+<h1>Lorenzo & Kakalamba</h1>
+</div>
+
+<div class="col mt-3" style="text-align:center">
+Ocenite restoran:
+<i id="1" onmouseenter="changeEnter(1)" onmouseleave="changeLeave(1)" onclick="changeClick(1)" class="far fa-star"></i>
+<i id="2" onmouseenter="changeEnter(2)" onmouseleave="changeLeave(2)" onclick="changeClick(2)" class="far fa-star"></i>
+<i id="3" onmouseenter="changeEnter(3)" onmouseleave="changeLeave(3)" onclick="changeClick(3)" class="far fa-star"></i>
+<i id="4" onmouseenter="changeEnter(4)" onmouseleave="changeLeave(4)" onclick="changeClick(4)" class="far fa-star"></i>
+<i id="5" onmouseenter="changeEnter(5)" onmouseleave="changeLeave(5)" onclick="changeClick(5)" class="far fa-star"></i>
+
+</div>
+</div>
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/lorenzo.jpg"  alt="Slika">
+    </div>
+    <div class="carousel-item">
+      <img src="images/lorenzo-2.jpg" width="1100" height="300" alt="Slika">
+    </div>
+    <div class="carousel-item">
+      <img src="images/lorenzo-3.jpg" width="1100" height="300" alt="Slika">
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+<p class="mt-2">"LORENZO I KAKALAMBA" je porodični restoran koji je za kratko vreme uspeo da osvoji goste svojom originalnošću, šarmom i jedinstvenim spojem Firence i Pirota.</p>
+<p>Zamisao je potekla od iskrenog obećanja pažljivog muža voljenoj ženi na početku braka: ”Draga, jedino što mogu sigurno da ti obećam je da nikada nećeš biti gladna!”. </p>
+<p>Iz jedne ljubavi, slike dva života su se izmešale u biografiji jednog restorana – dobili smo spoj tradicije, jednostavnosti i novih tehnologija u pripremi hrane, kao i uvek novih vizuelnih iznenađenja. Kroz autentičnu ponudu tradicionalnih firentinskih i piroćanskih specijaliteta i istog takvog ambijenta, imaćete osećaj da ste na jugu Srbije ili ste otputovali kroz vreme nazad u renesansnu Italiju. Pred vama će se nizati slike i mešati ukusi prošlosti i budućnosti, tradicije i avangarde. Zapitaćete se da niste možda zalutali u muzej, a kada vam se oko privikne na čudesan svet u kom ste se zatekli a osmeh uporno ostajao na licu, setićete se zašto ste odabrali baš tu da jedete. </p>
+<p>Došli ste u jednu veliku porodicu koja voli to što radi.</p>
+<!--The div element for the map -->
+<div class="row mt-3">
+<div class="col-12">
+ <div id="map"></div>
+ </div>
+ </div>
+<!-- Footer begin -->
+<div class="row mt-3">
+<div class="col">
+ <footer class="page-footer bg-primary" style="color:white;">
+  <div class="text-center py-3">
+    „Copyright 2019, Mihajlo Ogrizovic i Filip Jankovic, Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu."
+  </div>
+</footer>
+</div>
+</div>
+<!-- Footer end -->
+
+</body>
+</html>

@@ -36,24 +36,35 @@
       <li class="nav-item ">
         <a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
       </li>
-     	 <li class="nav-item dropdown">
+   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="restorani.html" role="button" aria-haspopup="true" aria-expanded="false">Restorani</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="restoraniZvezdara.html">Zvezdara</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item " href="restoraniZvezdara.html">Zvezdara</a>
+      <a class="dropdown-item" href="restoraniNoviBeograd.html">Novi Beograd</a>
+      <a class="dropdown-item" href="restoraniLion.html">Lion</a>
+      <a class="dropdown-item" href="restoraniPalilula.html">Palilula</a>
     </div>
   </li>
       <li class="nav-item active">
         <a class="nav-link" href="dostava.html">Dostava</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Moje narudžbine</a>
+        <a class="nav-link" href="mojeNarudzbine.html">Moje narudžbine</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">O nama</a>
+      <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="restorani.html" role="button" aria-haspopup="true" aria-expanded="false">O nama</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="otimu.html">O timu</a>
+      <a class="dropdown-item" href="sponzori.html">Sponzori</a>
+      <a class="dropdown-item" href="nagrade.html">Nagrade</a>
+    </div>
+  </li>
+	<li class="nav-item">
+        <a class="nav-link" href="dostava.html"><img src="images/serbiaflag.png" height=30 width=30></a>
       </li>
+	 <li class="nav-item">
+        <a class="nav-link" href="dostavaEng.html"><img src="images/ukflag.webp" height=30 width=30></a>
+      </li> 
     </ul>
     
   </div>
@@ -61,16 +72,16 @@
 <!-- Navbar end -->
 <!-- Proseravanje opis -->
 <div class="row mt-3">
-<div class="col-3 border border-primary rounded" style="margin-left:15px">
+<div class="col-3 border border-primary rounded" style="margin-left:15px;height:500px;">
 
-<fieldset class="text-primary" style="text-align:center">
+<fieldset class="text-primary" style="text-align:center;">
 
-  <legend>Filtriraj po: </legend>
+  <legend>Filtriraj po hrani: </legend>
   <div style="text-align:left">
   <div class="form-group">
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="Kineska" checked="">
-      <label class="custom-control-label" for="Kineska">Kineska</label>
+      <input type="checkbox" class="custom-control-input" id="Italijanska" checked="">
+      <label class="custom-control-label" for="Italijanska">Italijanska</label>
     </div>
   </div>
   <div class="form-group">
@@ -86,10 +97,28 @@
     </div>
   </div>
   </div>
+  
+  <legend>Filtriraj po opštini: </legend>
+  <div style="text-align:left">
   <div class="form-group">
-  <button type="button" onclick="filtrirajPoTipuHrane()" class="btn btn-outline-primary">Filtriraj</button>
-   </div>
- 
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="Zvezdara" checked="">
+      <label class="custom-control-label" for="Zvezdara">Zvezdara</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="Novi Beograd" checked="">
+      <label class="custom-control-label" for="Novi Beograd">Domaća</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="Internacionalna" checked="">
+      <label class="custom-control-label" for="Internacionalna">Internacionalna</label>
+    </div>
+  </div>
+  </div>
   <legend>Sortiraj po: </legend>
   <div style="text-align:left">
   <div class="form-group">
@@ -112,7 +141,7 @@
   </div>
   </div>
   <div class="form-group">
-  <button type="button" onclick="sortirajRestorane()" class="btn btn-outline-primary">Sortiraj</button>
+  <button type="button" onclick="sortirajRestorane()" class="btn btn-outline-primary">Pretraži</button>
    </div>
 </fieldset>
 
